@@ -28,6 +28,7 @@ public class Acceptor implements Runnable{
             SocketChannel channel = serverSocket.accept();
             if (null != channel) {
                 // 将客户端连接交由线程池处理
+                executor.execute(new Handler(channel));
             }
         } catch (IOException e) {
             e.printStackTrace();

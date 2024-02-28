@@ -13,6 +13,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.Objects;
 
 /**
  * 文件读写、映射和操作的通道，并发环境下线程安全 基于 FileInputStream、FileOutputStream 或者 RandomAccessFile 的 getChannel()
@@ -45,7 +46,7 @@ public class FileChannelTest {
   }
 
   private String getClassPath(String sourceFile) {
-    return getClass().getResource(SOURCE_FILE).getPath();
+    return Objects.requireNonNull(getClass().getResource(sourceFile)).getPath();
   }
 
   @Test

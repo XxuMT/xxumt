@@ -11,7 +11,7 @@ import java.util.concurrent.CountDownLatch;
  */
 public class SocketClientDemo {
     public static void main(String[] args) throws Exception {
-        Integer clientNum = 20;
+        int clientNum = 20;
         CountDownLatch countDownLatch = new CountDownLatch(clientNum);
 
         for (int index = 0; index < clientNum; index++, countDownLatch.countDown()) {
