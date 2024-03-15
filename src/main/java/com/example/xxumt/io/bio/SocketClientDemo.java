@@ -1,5 +1,7 @@
 package com.example.xxumt.io.bio;
 
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+
 import java.util.concurrent.CountDownLatch;
 
 /**
@@ -9,6 +11,7 @@ import java.util.concurrent.CountDownLatch;
  * @date 2023/4/20 10:34
  * @since 1.0
  */
+@EnableAspectJAutoProxy
 public class SocketClientDemo {
     public static void main(String[] args) throws Exception {
         int clientNum = 20;
